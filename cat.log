@@ -1,0 +1,572 @@
+Device  : samsung SM-G935S (hero2lteskt)
+Android : 6.0.1 (G935SKSU1APL1, MMB29K.G935SKSU1APL1)
+Memory  : 41M (19.20% free, 256M max)
+Memclass: 256
+OS Host : SWDD3020
+App     : Signal 3.27.1
+
+--------- beginning of main
+01-27 13:30:26.047 23720 12688 W WebSocketConnection: onFailure()
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: java.io.EOFException
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okio.RealBufferedSource.require(RealBufferedSource.java:59)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okio.RealBufferedSource.readByte(RealBufferedSource.java:72)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okhttp3.internal.ws.WebSocketReader.readHeader(WebSocketReader.java:113)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okhttp3.internal.ws.WebSocketReader.processNextFrame(WebSocketReader.java:97)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okhttp3.internal.ws.RealWebSocket.loopReader(RealWebSocket.java:261)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okhttp3.internal.ws.RealWebSocket$2.onResponse(RealWebSocket.java:200)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okhttp3.RealCall$AsyncCall.execute(RealCall.java:135)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at okhttp3.internal.NamedRunnable.run(NamedRunnable.java:32)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1113)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:588)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: 	at java.lang.Thread.run(Thread.java:818)
+01-27 13:30:26.077 23720 12688 W WebSocketConnection: onClose()...
+01-27 13:30:26.277 23720 12688 W WebSocketConnection: WSC connect()...
+01-27 13:30:26.347 23720 23745 W MessageRetrievalService: Application level read timeout...
+01-27 13:30:26.347 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 0, push pending: 0
+01-27 13:30:26.347 23720 23745 W MessageRetrievalService: Shutting down pipe...
+01-27 13:30:26.347 23720 23745 W WebSocketConnection: WSC disconnect()...
+01-27 13:30:26.347 23720 23745 W MessageRetrievalService: Looping...
+01-27 13:30:26.347 23720 23745 W MessageRetrievalService: Waiting for websocket state change....
+01-27 13:30:26.347 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 0, push pending: 0
+01-27 13:30:31.297 23720 12871 W WebSocketConnection: onClosing()!...
+01-27 13:30:31.297 23720 12871 W WebSocketConnection: onClose()...
+01-27 13:30:48.067 23720 12694 W WebSocketConnection: Sending keep alive...
+01-27 13:37:10.757 23720 23720 W SMSListener: Got SMS broadcast...
+01-27 13:37:10.997 23720 23736 W MmsSmsDatabase: Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, expires_in, expire_started, transport_type, attachment_id, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS thumbnail, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 4) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, network_failures, 'mms' AS transport_type, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 4) ORDER BY date_received DESC LIMIT 1)
+01-27 13:37:11.017 23720 23739 W ThreadDatabase: Trimming thread: 4 to: 500
+01-27 13:37:11.017 23720 23736 W MmsSmsDatabase: Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, expires_in, expire_started, transport_type, attachment_id, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS thumbnail, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, network_failures, 'mms' AS transport_type, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+01-27 13:37:11.017 23720 23739 W MmsSmsDatabase: Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, expires_in, expire_started, transport_type, attachment_id, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS thumbnail, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 4) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, network_failures, 'mms' AS transport_type, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 4) ORDER BY date_received DESC)
+01-27 13:37:11.047 23720 23736 W NotificationState: Added thread: 4
+01-27 13:37:11.047 23720 23736 W NotificationState: getAndroidAutoHeardIntent Added thread: 4
+01-27 13:37:11.287 23720 23729 I art     : Background partial concurrent mark sweep GC freed 110307(6MB) AllocSpace objects, 56(3MB) LOS objects, 38% free, 25MB/41MB, paused 699us total 232.388ms
+01-27 13:37:11.427 23720 23720 W SMSListener: Got SMS broadcast...
+01-27 13:37:13.107 23720 23720 W PassphraseRequiredActionBarActivity: onDestroy()
+01-27 13:37:13.147 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:13.167 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:37:13.177 23720 23720 W PassphraseRequiredActionBarActivity: onDestroy()
+01-27 13:37:13.227 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:13.227 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:37:13.247 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:13.247 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:37:13.287 23720 23720 E WindowManager: 
+01-27 13:37:13.287 23720 23720 E WindowManager: android.view.WindowLeaked: Activity org.thoughtcrime.securesms.LogSubmitActivity has leaked window com.android.internal.policy.PhoneWindow$DecorView{d3f7646 V.E...... R....... 0,0-1336,1025} that was originally added here
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.view.ViewRootImpl.<init>(ViewRootImpl.java:565)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.view.WindowManagerGlobal.addView(WindowManagerGlobal.java:326)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:91)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.app.Dialog.show(Dialog.java:350)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at org.whispersystems.libpastelog.SubmitLogFragment.handleShowSuccessDialog(SubmitLogFragment.java:298)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at org.whispersystems.libpastelog.SubmitLogFragment.access$300(SubmitLogFragment.java:81)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at org.whispersystems.libpastelog.SubmitLogFragment$SubmitToPastebinAsyncTask.onPostExecute(SubmitLogFragment.java:396)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at org.whispersystems.libpastelog.SubmitLogFragment$SubmitToPastebinAsyncTask.onPostExecute(SubmitLogFragment.java:336)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.os.AsyncTask.finish(AsyncTask.java:651)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.os.AsyncTask.access$500(AsyncTask.java:180)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.os.AsyncTask$InternalHandler.handleMessage(AsyncTask.java:668)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.os.Looper.loop(Looper.java:158)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at android.app.ActivityThread.main(ActivityThread.java:7229)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at java.lang.reflect.Method.invoke(Native Method)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+01-27 13:37:13.287 23720 23720 E WindowManager: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+01-27 13:37:13.297 23720 23720 D RelationGraph: garbageCollect()
+01-27 13:37:13.297 23720 23720 W PassphraseRequiredActionBarActivity: onCreate(null)
+01-27 13:37:13.307 23720 23720 W ExperienceUpgradeActivity: getExperienceUpgrade(227)
+01-27 13:37:13.307 23720 23720 W PassphraseRequiredActionBarActivity: routeApplicationState(), state: 0
+01-27 13:37:13.307 23720 23720 W PassphraseRequiredActionBarActivity: initializeClearKeyReceiver()
+01-27 13:37:13.307 23720 23720 W ConversationActivity: onCreate()
+01-27 13:37:13.307 23720 23720 I AppCompatDelegate: You should now use the AppCompatDelegate.FEATURE_SUPPORT_ACTION_BAR_OVERLAY id when requesting this feature.
+01-27 13:37:13.347 23720 23720 W QuickAttachmentDrawer: updateControlsView()
+01-27 13:37:13.477 23720 23720 D Activity: performCreate Call Injection manager
+01-27 13:37:13.477 23720 24430 W PhoneNumberFormatter: Got local CC: PH
+01-27 13:37:13.477 23720 23720 I InjectionManager: dispatchOnViewCreated > Target : org.thoughtcrime.securesms.ConversationActivity isFragment :false
+01-27 13:37:13.477 23720 23720 W PassphraseRequiredActionBarActivity: onResume()
+01-27 13:37:13.477 23720 24429 W MmsSmsDatabase: Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, expires_in, expire_started, transport_type, attachment_id, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS thumbnail, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 4) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, network_failures, 'mms' AS transport_type, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 4) ORDER BY date_received DESC LIMIT 500)
+01-27 13:37:13.497 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.MultiPhoneWindow$MultiPhoneDecorView{baade86 I.E...... R.....ID 0,0-0,0}
+01-27 13:37:13.507 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:37:13.507 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+01-27 13:37:13.507 23720 23720 W KeyCachingService: Incrementing activity count...
+01-27 13:37:13.507 23720 23720 W MessageRetrievalService: Active Count: 1
+01-27 13:37:13.507 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 1, push pending: 0
+01-27 13:37:13.517 23720 23745 W MessageRetrievalService: Making websocket connection....
+01-27 13:37:13.517 23720 23745 W WebSocketConnection: WSC connect()...
+01-27 13:37:13.517 23720 24072 W MmsSmsDatabase: Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, expires_in, expire_started, transport_type, attachment_id, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS thumbnail, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (read = 0) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, network_failures, 'mms' AS transport_type, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (read = 0) ORDER BY date_received ASC)
+01-27 13:37:13.517 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:13.527 23720 23720 W KeyboardAwareLinearLayout: rotation changed
+01-27 13:37:13.527 23720 23720 W KeyboardAwareLinearLayout: onKeyboardClose()
+01-27 13:37:13.537 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:37:13.537 23720 23720 W CameraView: skipping layout due to zero-width/height preview size
+01-27 13:37:13.557 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 1, push pending: 0
+01-27 13:37:13.557 23720 23745 W MessageRetrievalService: Reading message...
+01-27 13:37:13.627 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:37:13.667 23720 23720 I InjectionManager: dispatchCreateOptionsMenu :org.thoughtcrime.securesms.ConversationActivity
+01-27 13:37:13.667 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ConversationActivity
+01-27 13:37:13.677 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ConversationActivity
+01-27 13:37:13.677 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 96 - 0, 0) vi=Rect(0, 96 - 0, 0) or=1
+01-27 13:37:13.727 23720 23720 W ConversationActivity: updateInviteReminder(false)
+01-27 13:37:13.727 23720 23720 W ConversationActivity: updateDefaultSubscriptionId(null)
+01-27 13:37:13.737 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@b0899f5 time:15777117
+01-27 13:37:14.627 23720 23720 D ViewRootImpl: ViewPostImeInputStage processKey 0
+01-27 13:37:14.687 23720 23720 D ViewRootImpl: ViewPostImeInputStage processKey 1
+01-27 13:37:14.687 23720 23720 W ConversationActivity: onBackPressed()
+01-27 13:37:14.697 23720 23720 W PassphraseRequiredActionBarActivity: onPause()
+01-27 13:37:14.717 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+01-27 13:37:14.717 23720 23720 W KeyCachingService: Decrementing activity count...
+01-27 13:37:14.717 23720 23720 W MessageRetrievalService: Active Count: 0
+01-27 13:37:14.717 23720 23720 D RelationGraph: garbageCollect()
+01-27 13:37:14.727 23720 23720 W PassphraseRequiredActionBarActivity: onCreate(null)
+01-27 13:37:14.727 23720 23720 W ExperienceUpgradeActivity: getExperienceUpgrade(227)
+01-27 13:37:14.727 23720 23720 W PassphraseRequiredActionBarActivity: routeApplicationState(), state: 0
+01-27 13:37:14.727 23720 23720 W PassphraseRequiredActionBarActivity: initializeClearKeyReceiver()
+01-27 13:37:14.737 23720 23720 D Activity: performCreate Call Injection manager
+01-27 13:37:14.747 23720 23720 I InjectionManager: dispatchOnViewCreated > Target : org.thoughtcrime.securesms.ConversationListActivity isFragment :false
+01-27 13:37:14.747 23720 23720 W PassphraseRequiredActionBarActivity: onResume()
+01-27 13:37:14.747 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.MultiPhoneWindow$MultiPhoneDecorView{4b0289e I.E...... R.....ID 0,0-0,0}
+01-27 13:37:14.757 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+01-27 13:37:14.757 23720 23720 W KeyCachingService: Incrementing activity count...
+01-27 13:37:14.757 23720 23720 W MessageRetrievalService: Active Count: 1
+01-27 13:37:14.757 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:14.777 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:37:14.847 23720 23720 I InjectionManager: dispatchCreateOptionsMenu :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:37:14.857 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:37:14.857 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:37:14.857 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:37:14.877 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 96 - 0, 0) vi=Rect(0, 96 - 0, 0) or=1
+01-27 13:37:14.907 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@2cf98fd time:15778281
+01-27 13:37:15.087 23720 23720 W PassphraseRequiredActionBarActivity: onDestroy()
+01-27 13:37:15.097 23720 23829 W MmsSmsDatabase: Executing query: SELECT _id, unique_row_id, body, type, thread_id, address, address_device_id, subject, date_sent, date_received, m_type, msg_box, status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, network_failures, subscription_id, expires_in, expire_started, transport_type, attachment_id, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM (SELECT DISTINCT date_sent AS date_sent, date AS date_received, _id, 'SMS::' || _id || '::' || date_sent AS unique_row_id, NULL AS attachment_id, body, read, thread_id, type, address, address_device_id, subject, NULL AS m_type, NULL AS msg_box, status, NULL AS part_count, NULL AS ct_l, NULL AS tr_id, NULL AS m_size, NULL AS exp, NULL AS st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, NULL AS network_failures, 'sms' AS transport_type, NULL AS unique_id, NULL AS mid, NULL AS data_size, NULL AS _data, NULL AS thumbnail, NULL AS ct, NULL AS cl, NULL AS cd, NULL AS name, NULL AS pending_push FROM sms WHERE (thread_id = 4) UNION ALL SELECT DISTINCT date AS date_sent, date_received AS date_received, mms._id AS _id, 'MMS::' || mms._id || '::' || date AS unique_row_id, part._id AS attachment_id, body, read, thread_id, NULL AS type, address, address_device_id, NULL AS subject, m_type, msg_box, NULL AS status, part_count, ct_l, tr_id, m_size, exp, st, delivery_receipt_count, mismatched_identities, subscription_id, expires_in, expire_started, network_failures, 'mms' AS transport_type, unique_id, mid, data_size, _data, thumbnail, ct, cl, cd, name, pending_push FROM mms LEFT OUTER JOIN part ON part._id =  (SELECT part._id FROM part WHERE part.mid = mms._id LIMIT 1) WHERE (thread_id = 4) ORDER BY date_received DESC LIMIT 1)
+01-27 13:37:15.097 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:15.097 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:37:15.267 23720 13785 W WebSocketConnection: onConnected()
+01-27 13:37:15.847 23720 23720 D ViewRootImpl: ViewPostImeInputStage processKey 0
+01-27 13:37:15.897 23720 23720 D ViewRootImpl: ViewPostImeInputStage processKey 1
+01-27 13:37:15.927 23720 23720 W PassphraseRequiredActionBarActivity: onPause()
+01-27 13:37:15.957 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+01-27 13:37:15.957 23720 23720 W KeyCachingService: Decrementing activity count...
+01-27 13:37:15.957 23720 23720 W MessageRetrievalService: Active Count: 0
+01-27 13:37:16.577 23720 23720 W PassphraseRequiredActionBarActivity: onDestroy()
+01-27 13:37:16.587 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:16.587 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:37:58.267 23720 23720 D RelationGraph: garbageCollect()
+--------- beginning of system
+01-27 13:37:58.267 23720 23720 W ResourcesManager: getTopLevelResources: /data/app/org.thoughtcrime.securesms-1/base.apk / 1.0 running in org.thoughtcrime.securesms rsrc of package org.thoughtcrime.securesms
+01-27 13:37:58.277 23720 23720 W PassphraseRequiredActionBarActivity: onCreate(null)
+01-27 13:37:58.277 23720 23720 W ExperienceUpgradeActivity: getExperienceUpgrade(227)
+01-27 13:37:58.277 23720 23720 W PassphraseRequiredActionBarActivity: routeApplicationState(), state: 0
+01-27 13:37:58.287 23720 23720 W PassphraseRequiredActionBarActivity: initializeClearKeyReceiver()
+01-27 13:37:58.307 23720 23720 D Activity: performCreate Call Injection manager
+01-27 13:37:58.307 23720 23720 I InjectionManager: dispatchOnViewCreated > Target : org.thoughtcrime.securesms.ConversationListActivity isFragment :false
+01-27 13:37:58.307 23720 23720 W PassphraseRequiredActionBarActivity: onResume()
+01-27 13:37:58.317 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.MultiPhoneWindow$MultiPhoneDecorView{50aa490 I.E...... R.....ID 0,0-0,0}
+01-27 13:37:58.317 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+01-27 13:37:58.317 23720 23720 W KeyCachingService: Incrementing activity count...
+01-27 13:37:58.317 23720 23720 W MessageRetrievalService: Active Count: 1
+01-27 13:37:58.317 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:37:58.317 23720 23720 D SecWifiDisplayUtil: Metadata value : SecSettings2
+01-27 13:37:58.327 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:37:58.387 23720 23720 I InjectionManager: dispatchCreateOptionsMenu :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:37:58.397 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:37:58.397 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:37:58.397 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 96 - 0, 0) vi=Rect(0, 96 - 0, 0) or=1
+01-27 13:37:58.407 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:37:58.437 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@feafcd7 time:15821811
+01-27 13:37:59.787 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:37:59.827 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:37:59.857 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:37:59.877 23720 23720 D AbsListView: Get MotionRecognitionManager
+01-27 13:37:59.877 23720 23720 E MotionRecognitionManager: mSContextService = android.hardware.scontext.ISContextService$Stub$Proxy@4033e34
+01-27 13:37:59.877 23720 23720 E MotionRecognitionManager: motionService = com.samsung.android.motion.IMotionRecognitionService$Stub$Proxy@28d845d
+01-27 13:37:59.877 23720 23720 E MotionRecognitionManager: motionService = com.samsung.android.motion.IMotionRecognitionService$Stub$Proxy@28d845d
+01-27 13:37:59.887 23720 23720 D ViewRootImpl: #1 mView = android.widget.PopupWindow$PopupDecorView{e6152a3 V.E...... ......I. 0,0-0,0}
+01-27 13:37:59.937 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1040x1600]-format:1
+01-27 13:37:59.997 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:00.037 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 0 - 0, 0) vi=Rect(0, 0 - 0, 0) or=1
+01-27 13:38:00.977 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:01.017 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:01.077 23720 23720 I InjectionManager: dispatchOptionsItemSelected :org.thoughtcrime.securesms.ConversationListActivity
+01-27 13:38:01.077 23720 23720 I Timeline: Timeline: Activity_launch_request id:org.thoughtcrime.securesms time:15824459
+01-27 13:38:01.107 23720 23720 W PassphraseRequiredActionBarActivity: onPause()
+01-27 13:38:01.127 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+01-27 13:38:01.127 23720 23720 W KeyCachingService: Decrementing activity count...
+01-27 13:38:01.127 23720 23720 W MessageRetrievalService: Active Count: 0
+01-27 13:38:01.127 23720 23720 D RelationGraph: garbageCollect()
+01-27 13:38:01.127 23720 23720 W PassphraseRequiredActionBarActivity: onCreate(null)
+01-27 13:38:01.127 23720 23720 W ExperienceUpgradeActivity: getExperienceUpgrade(227)
+01-27 13:38:01.127 23720 23720 W PassphraseRequiredActionBarActivity: routeApplicationState(), state: 0
+01-27 13:38:01.127 23720 23720 W ResourcesManager: getTopLevelResources: /data/app/org.thoughtcrime.securesms-1/base.apk / 1.0 running in org.thoughtcrime.securesms rsrc of package org.thoughtcrime.securesms
+01-27 13:38:01.137 23720 23720 W PassphraseRequiredActionBarActivity: initializeClearKeyReceiver()
+01-27 13:38:01.147 23720 23720 D Activity: performCreate Call Injection manager
+01-27 13:38:01.147 23720 23720 D AbsListView: Get MotionRecognitionManager
+01-27 13:38:01.147 23720 23720 E MotionRecognitionManager: mSContextService = android.hardware.scontext.ISContextService$Stub$Proxy@e58b092
+01-27 13:38:01.147 23720 23720 E MotionRecognitionManager: motionService = com.samsung.android.motion.IMotionRecognitionService$Stub$Proxy@47bda63
+01-27 13:38:01.147 23720 23720 E MotionRecognitionManager: motionService = com.samsung.android.motion.IMotionRecognitionService$Stub$Proxy@47bda63
+01-27 13:38:01.157 23720 23720 I InjectionManager: dispatchOnViewCreated > Target : org.thoughtcrime.securesms.ApplicationPreferencesActivity isFragment :false
+01-27 13:38:01.157 23720 23720 W PassphraseRequiredActionBarActivity: onResume()
+01-27 13:38:01.167 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.MultiPhoneWindow$MultiPhoneDecorView{c0608e I.E...... R.....ID 0,0-0,0}
+01-27 13:38:01.167 23720 23720 D SecWifiDisplayUtil: Metadata value : SecSettings2
+01-27 13:38:01.177 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:38:01.187 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:38:01.217 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+01-27 13:38:01.217 23720 23720 W KeyCachingService: Incrementing activity count...
+01-27 13:38:01.217 23720 23720 W MessageRetrievalService: Active Count: 1
+01-27 13:38:01.217 23720 23720 I InjectionManager: dispatchCreateOptionsMenu :org.thoughtcrime.securesms.ApplicationPreferencesActivity
+01-27 13:38:01.217 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.ApplicationPreferencesActivity
+01-27 13:38:01.227 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:01.247 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 96 - 0, 0) vi=Rect(0, 96 - 0, 0) or=1
+01-27 13:38:01.307 23720 23827 D OpenGLRenderer: endAllActiveAnimators on 0xdc3aae80 (MenuPopupWindow$MenuDropDownListView) with handle 0xd4c9fda0
+01-27 13:38:01.307 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@55cebd7 time:15824686
+01-27 13:38:01.437 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:38:01.547 23720 23720 V ActivityThread: updateVisibility : ActivityRecord{617dd68 token=android.os.BinderProxy@feafcd7 {org.thoughtcrime.securesms/org.thoughtcrime.securesms.ConversationListActivity}} show : false
+01-27 13:38:01.947 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:01.997 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:02.077 23720 23720 D AbsListView: Get MotionRecognitionManager
+01-27 13:38:03.037 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:03.117 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:03.177 23720 23720 I Timeline: Timeline: Activity_launch_request id:org.thoughtcrime.securesms time:15826559
+01-27 13:38:03.207 23720 23720 W PassphraseRequiredActionBarActivity: onPause()
+01-27 13:38:03.217 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+01-27 13:38:03.217 23720 23720 W KeyCachingService: Decrementing activity count...
+01-27 13:38:03.217 23720 23720 W MessageRetrievalService: Active Count: 0
+01-27 13:38:03.217 23720 23720 D RelationGraph: garbageCollect()
+01-27 13:38:03.217 23720 23720 W ResourcesManager: getTopLevelResources: /data/app/org.thoughtcrime.securesms-1/base.apk / 1.0 running in org.thoughtcrime.securesms rsrc of package org.thoughtcrime.securesms
+01-27 13:38:03.237 23720 23720 D Activity: performCreate Call Injection manager
+01-27 13:38:03.247 23720 23720 I InjectionManager: dispatchOnViewCreated > Target : org.thoughtcrime.securesms.LogSubmitActivity isFragment :false
+01-27 13:38:03.247 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.MultiPhoneWindow$MultiPhoneDecorView{5bfc134 I.E...... R.....ID 0,0-0,0}
+01-27 13:38:03.247 23720 23720 D SecWifiDisplayUtil: Metadata value : SecSettings2
+01-27 13:38:03.297 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:38:03.327 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:38:03.337 23720 24430 D Scrubber: scrubbing input
+01-27 13:38:03.337 23720 23720 W ClipboardExManager: hasData : 2, -1, null
+01-27 13:38:03.337 23720 23720 I InjectionManager: dispatchCreateOptionsMenu :org.thoughtcrime.securesms.LogSubmitActivity
+01-27 13:38:03.337 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.LogSubmitActivity
+01-27 13:38:03.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.367 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 96 - 0, 0) vi=Rect(0, 96 - 0, 0) or=1
+01-27 13:38:03.387 23720 23720 W ClipboardExManager: hasData : 2, -1, null
+01-27 13:38:03.447 23720 23720 W ClipboardExManager: hasData : 2, -1, null
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.447 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.457 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.467 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.477 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:03.507 23720 23827 D OpenGLRenderer: endAllActiveAnimators on 0xdcc37180 (ListView) with handle 0xd4c9fd00
+01-27 13:38:03.517 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@d1a1e40 time:15826891
+01-27 13:38:03.657 23720 23720 V ActivityThread: updateVisibility : ActivityRecord{baa1101 token=android.os.BinderProxy@55cebd7 {org.thoughtcrime.securesms/org.thoughtcrime.securesms.ApplicationPreferencesActivity}} show : false
+01-27 13:38:10.277 23720 13792 W WebSocketConnection: Sending keep alive...
+01-27 13:38:10.577 23720 13785 W WebSocketConnection: WSC onMessage()
+01-27 13:38:10.577 23720 13785 W WebSocketConnection: Message Type: 2
+01-27 13:38:13.557 23720 23745 W MessageRetrievalService: Application level read timeout...
+01-27 13:38:13.567 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 0, push pending: 0
+01-27 13:38:13.567 23720 23745 W MessageRetrievalService: Shutting down pipe...
+01-27 13:38:13.567 23720 23745 W WebSocketConnection: WSC disconnect()...
+01-27 13:38:13.567 23720 23745 W MessageRetrievalService: Looping...
+01-27 13:38:13.567 23720 23745 W MessageRetrievalService: Waiting for websocket state change....
+01-27 13:38:13.567 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 0, push pending: 0
+01-27 13:38:13.847 23720 13785 W WebSocketConnection: onClosing()!...
+01-27 13:38:13.847 23720 13785 W WebSocketConnection: onClose()...
+01-27 13:38:15.677 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:16.207 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:16.657 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:16.717 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:21.407 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:21.477 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:21.727 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:21.827 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:22.327 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:22.417 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:23.177 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:23.267 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:24.077 23720 23720 D ViewRootImpl: ViewPostImeInputStage processKey 0
+01-27 13:38:24.147 23720 23720 D ViewRootImpl: ViewPostImeInputStage processKey 1
+01-27 13:38:24.177 23720 23720 W PassphraseRequiredActionBarActivity: onResume()
+01-27 13:38:24.217 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:38:24.217 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+01-27 13:38:24.217 23720 23720 W KeyCachingService: Incrementing activity count...
+01-27 13:38:24.217 23720 23720 W MessageRetrievalService: Active Count: 1
+01-27 13:38:24.217 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 1, push pending: 0
+01-27 13:38:24.217 23720 23745 W MessageRetrievalService: Making websocket connection....
+01-27 13:38:24.217 23720 23745 W WebSocketConnection: WSC connect()...
+01-27 13:38:24.247 23720 23745 W MessageRetrievalService: Network requirement: true, active activities: 1, push pending: 0
+01-27 13:38:24.247 23720 23745 W MessageRetrievalService: Reading message...
+01-27 13:38:24.267 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@55cebd7 time:15847645
+01-27 13:38:24.547 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:38:24.547 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:38:25.047 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:25.107 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:25.167 23720 23720 I Timeline: Timeline: Activity_launch_request id:org.thoughtcrime.securesms time:15848547
+01-27 13:38:25.187 23720 23720 W PassphraseRequiredActionBarActivity: onPause()
+01-27 13:38:25.207 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+01-27 13:38:25.207 23720 23720 W KeyCachingService: Decrementing activity count...
+01-27 13:38:25.207 23720 23720 W MessageRetrievalService: Active Count: 0
+01-27 13:38:25.207 23720 23720 D RelationGraph: garbageCollect()
+01-27 13:38:25.207 23720 23720 W ResourcesManager: getTopLevelResources: /data/app/org.thoughtcrime.securesms-1/base.apk / 1.0 running in org.thoughtcrime.securesms rsrc of package org.thoughtcrime.securesms
+01-27 13:38:25.217 23720 23720 D Activity: performCreate Call Injection manager
+01-27 13:38:25.227 23720 23720 I InjectionManager: dispatchOnViewCreated > Target : org.thoughtcrime.securesms.LogSubmitActivity isFragment :false
+01-27 13:38:25.227 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.MultiPhoneWindow$MultiPhoneDecorView{7a0d2d5 I.E...... R.....ID 0,0-0,0}
+01-27 13:38:25.227 23720 23720 D SecWifiDisplayUtil: Metadata value : SecSettings2
+01-27 13:38:25.257 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:38:25.267 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:38:25.277 23720 23720 W ClipboardExManager: hasData : 2, -1, null
+01-27 13:38:25.277 23720 24074 D Scrubber: scrubbing input
+01-27 13:38:25.287 23720 23720 I InjectionManager: dispatchCreateOptionsMenu :org.thoughtcrime.securesms.LogSubmitActivity
+01-27 13:38:25.287 23720 23720 I InjectionManager: dispatchPrepareOptionsMenu :org.thoughtcrime.securesms.LogSubmitActivity
+01-27 13:38:25.287 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.287 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.297 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 96 - 0, 0) vi=Rect(0, 96 - 0, 0) or=1
+01-27 13:38:25.307 23720 23720 W ClipboardExManager: hasData : 2, -1, null
+01-27 13:38:25.347 23720 23720 W ClipboardExManager: hasData : 2, -1, null
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.347 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.357 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.367 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.377 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.387 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:25.407 23720 23827 D OpenGLRenderer: endAllActiveAnimators on 0xdcc37180 (ListView) with handle 0xd80ff890
+01-27 13:38:25.407 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@b583c71 time:15848787
+01-27 13:38:25.577 23720 23720 V ActivityThread: updateVisibility : ActivityRecord{baa1101 token=android.os.BinderProxy@55cebd7 {org.thoughtcrime.securesms/org.thoughtcrime.securesms.ApplicationPreferencesActivity}} show : false
+01-27 13:38:25.827 23720 13909 W WebSocketConnection: onConnected()
+01-27 13:38:25.887 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:25.957 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:25.987 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.PhoneWindow$DecorView{1d31620 V.E...... R.....I. 0,0-0,0}
+01-27 13:38:26.017 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1592x889]-format:1
+01-27 13:38:26.037 23720 23744 I System.out: Thread-1847(ApacheHTTPLog):isSBSettingEnabled true
+01-27 13:38:26.037 23720 23744 I System.out: Thread-1847(ApacheHTTPLog):isShipBuild true
+01-27 13:38:26.037 23720 23744 I System.out: Thread-1847(ApacheHTTPLog):getDebugLevel 0x4f4c
+01-27 13:38:26.037 23720 23744 I System.out: Thread-1847(ApacheHTTPLog):Smart Bonding Setting is true
+01-27 13:38:26.037 23720 23744 I System.out: Thread-1847(ApacheHTTPLog):SmartBonding Setting is true, SHIP_BUILD is true, log to file is false, DBG is false, DEBUG_LEVEL (1-LOW, 2-MID, 3-HIGH) is 1
+01-27 13:38:26.037 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:26.057 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 0 - 0, 0) vi=Rect(0, 0 - 0, 0) or=1
+01-27 13:38:29.447 23720 23744 I System.out: AsyncTask #1 calls detatch()
+01-27 13:38:29.577 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:38:29.617 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.PhoneWindow$DecorView{ae2bab9 V.E...... R.....I. 0,0-0,0}
+01-27 13:38:29.617 23720 23729 I art     : Background sticky concurrent mark sweep GC freed 76073(4MB) AllocSpace objects, 66(5MB) LOS objects, 20% free, 32MB/41MB, paused 1.350ms total 127.692ms
+01-27 13:38:29.657 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1592x1281]-format:1
+01-27 13:38:29.657 23720 23720 E ViewRootImpl: sendUserActionEvent() mView == null
+01-27 13:38:29.667 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:29.677 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 0 - 0, 0) vi=Rect(0, 0 - 0, 0) or=1
+01-27 13:38:30.987 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:31.057 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:31.077 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:38:31.157 23720 23720 E ViewRootImpl: sendUserActionEvent() mView == null
+01-27 13:38:31.157 23720 23720 D ViewRootImpl: #1 mView = android.widget.LinearLayout{d6fdcba V.E...... ......I. 0,0-0,0 #102039c android:id/toast_layout_root}
+01-27 13:38:31.157 23720 23720 D SecWifiDisplayUtil: Metadata value : SecSettings2
+01-27 13:38:31.197 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [672x200]-format:1
+01-27 13:38:31.197 23720 23720 W PassphraseRequiredActionBarActivity: onResume()
+01-27 13:38:31.197 23720 23720 D ViewRootImpl: MSG_RESIZED_REPORT: ci=Rect(0, 0 - 0, 0) vi=Rect(0, 0 - 0, 0) or=1
+01-27 13:38:31.207 23720 23720 W DisplayListCanvas: DisplayListCanvas is started on unbinded RenderNode (without mOwningView)
+01-27 13:38:31.227 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
+01-27 13:38:31.237 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT
+01-27 13:38:31.237 23720 23720 W KeyCachingService: Incrementing activity count...
+01-27 13:38:31.237 23720 23720 W MessageRetrievalService: Active Count: 1
+01-27 13:38:31.247 23720 23720 I Timeline: Timeline: Activity_idle id: android.os.BinderProxy@55cebd7 time:15854624
+01-27 13:38:31.537 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:38:31.537 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:38:32.947 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 0
+01-27 13:38:32.967 23720 23720 D ViewRootImpl: #3 mView = null
+01-27 13:38:33.007 23720 23720 D ViewRootImpl: ViewPostImeInputStage processPointer 1
+01-27 13:38:33.087 23720 23720 I Timeline: Timeline: Activity_launch_request id:org.thoughtcrime.securesms time:15856460
+01-27 13:38:33.107 23720 23720 W PassphraseRequiredActionBarActivity: onPause()
+01-27 13:38:33.117 23720 23720 W KeyCachingService: onStartCommand, org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT
+01-27 13:38:33.117 23720 23720 W KeyCachingService: Decrementing activity count...
+01-27 13:38:33.117 23720 23720 W MessageRetrievalService: Active Count: 0
+01-27 13:38:33.117 23720 23720 D RelationGraph: garbageCollect()
+01-27 13:38:33.117 23720 23720 W ResourcesManager: getTopLevelResources: /data/app/org.thoughtcrime.securesms-1/base.apk / 1.0 running in org.thoughtcrime.securesms rsrc of package org.thoughtcrime.securesms
+01-27 13:38:33.137 23720 23720 D Activity: performCreate Call Injection manager
+01-27 13:38:33.147 23720 23720 I InjectionManager: dispatchOnViewCreated > Target : org.thoughtcrime.securesms.LogSubmitActivity isFragment :false
+01-27 13:38:33.147 23720 23720 D ViewRootImpl: #1 mView = com.android.internal.policy.MultiPhoneWindow$MultiPhoneDecorView{aace3ca I.E...... R.....ID 0,0-0,0}
+01-27 13:38:33.147 23720 23720 D SecWifiDisplayUtil: Metadata value : SecSettings2
+01-27 13:38:33.167 23720 23720 D MultiPhoneWindow: performUpdateVisibility, same visibility false
+01-27 13:38:33.197 23720 23827 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [1440x2560]-format:1
